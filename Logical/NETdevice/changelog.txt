@@ -1,0 +1,5 @@
+Version 0.2
+- Added ping support
+
+Version 0.1
+- First public release

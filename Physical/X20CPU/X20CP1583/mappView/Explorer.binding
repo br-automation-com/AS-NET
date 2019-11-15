@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Explorer_binding">
+	<Bindings>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.ERR.active" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="btnNETreset" attribute="enable" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.enable_connect" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="btnNETconnect" attribute="enable" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.server_name" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="txtNETserver_name" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.server_ip" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="txtNETserver_ip" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.server_port" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="txtNETserver_port" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.server_domain" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="txtNETserver_domain" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.server_protocol" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="ddbNETprotocol" attribute="selectedValue" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.user_name" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="txtNETuser_name" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.user_password" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="txtNETuser_password" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.ERR.no" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="numNETErrorNo" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.ERR.text" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="txtNETError" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.is_linked" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="btnNETconnected" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.state_machine" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="ddbNETstatus" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.server_share" attribute="value" />
+			<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="txtNETserver_path" attribute="value" />
+		</Binding>		
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:NET.PAR.can_ping" attribute="value" />
+<Target xsi:type="brease" contentRefId="contentExplorer" widgetRefId="btnNETping" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>
