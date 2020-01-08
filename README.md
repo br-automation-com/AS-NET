@@ -6,7 +6,7 @@
 
 <a name="Introduction"></a>
 ## Introduction
-This is a sample project for mounting a network share on a B&R PLC.
+This is a sample project for mounting a network share on a B&R PLC. The task creates a file device with the name "NET_DEVICE". This device name can the be used with all libraries that support files devices, e.x. FileIO.
 
 ![](Logical/mappView/Resources/Media/screenshot_main.png)
 
