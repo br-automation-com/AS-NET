@@ -27,16 +27,21 @@ The task uses a variable structure to communicate with the outside world that ca
   </tr>
   <tr>
    <td></td>
+   <td>connect</td>
+   <td colspan="3">Connect to network share</td>
+  </tr>
+  <tr>
+   <td></td>
+   <td>disconnect</td>
+   <td colspan="3">Disconnect from network share</td>
+  </tr>
+  <tr>
+   <td></td>
    <td>error_reset</td>
-   <td colspan="3">Reset pending erros</td>
+   <td colspan="3">Reset pendiing errors</td>
   </tr>
     <th> PAR </th>
     <td colspan="3">Parameters tructure</td>
-  </tr>
-      <tr>
-   <td></td>
-   <td>state_machine</td>
-   <td colspan="3">Shows the internal state of the task.</td>
   </tr>
    <tr>
    <td></td>
@@ -81,7 +86,7 @@ The task uses a variable structure to communicate with the outside world that ca
         <tr>
    <td></td>
    <td>enable_connect</td>
-   <td colspan="3">Used to enable/disbale connect button in HMI.</td>
+   <td colspan="3">Used to enable/disable the connect and disconnect button in HMI.</td>
   </tr>
           <tr>
    <td></td>
@@ -108,14 +113,8 @@ The task uses a variable structure to communicate with the outside world that ca
    <td colspan="3">State where the error occurred</td>
   </tr>
   <tr>
-   <td></td>
-   <td>text</td>
-   <td colspan="3">Error text</td>
-  </tr>
-  <tr>
-   <td></td>
-   <td>active</td>
-   <td colspan="3">True when in error state</td>
+   <td>status</td>
+   <td colspan="3">Cuurent status</td>
   </tr>
 </table>
 
@@ -128,6 +127,12 @@ Recommended task class is #8 with a 10ms cycle time.
 
 <a name="Revision-History"></a>
 ## Revision History
+
+#### Version 0.3
+- Remove state variable from PAR structure
+- Added status variable to main structure
+- Added disconnect command
+- Ping is now executed all the time to detect connection interruption
 
 #### Version 0.2
 - Added ping support
