@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<EventBindingSet id="Explorer_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<EventBindingSet id="Net_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Bindings>
 		
-		<!-- //////////////////////////////////////////////// Configuration //////////////////////////////////////////////////////////////////////// />-->
-		
 		<!-- Connect to network share />-->
-		<EventBinding id="contentExplorer.btnNETconnect.Click">
-			<Source contentRefId="contentExplorer" widgetRefId="btnNETconnect" xsi:type="widgets.brease.Button.Event" event="Click" />
+		<EventBinding id="contentNet.btnNETconnect.Click">
+			<Source contentRefId="contentNet" widgetRefId="btnNETconnect" xsi:type="widgets.brease.Button.Event" event="Click" />
 			<EventHandler>
 				<Action>
 					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:NET.CMD.connect" >
@@ -16,9 +14,21 @@
 			</EventHandler>
 		</EventBinding>
 		
+		<!-- Disonnect from network share />-->
+		<EventBinding id="contentNet.btnNETdisconnect.Click">
+			<Source contentRefId="contentNet" widgetRefId="btnNETdisconnect" xsi:type="widgets.brease.Button.Event" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:NET.CMD.disconnect" >
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		
 		<!-- Reset error or abort command on network share />-->
-		<EventBinding id="contentExplorer.btnNETreset.Click">
-			<Source contentRefId="contentExplorer" widgetRefId="btnNETreset" xsi:type="widgets.brease.Button.Event" event="Click" />
+		<EventBinding id="contentNet.btnNETreset.Click">
+			<Source contentRefId="contentNet" widgetRefId="btnNETreset" xsi:type="widgets.brease.Button.Event" event="Click" />
 			<EventHandler>
 				<Action>
 					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:NET.CMD.error_reset" >

@@ -9,10 +9,10 @@ TYPE
 		);
 	netCMD : 	STRUCT 
 		connect : BOOL := TRUE; (*Connect to network share*)
+		disconnect : BOOL := TRUE; (*Disconnect from network share*)
 		error_reset : BOOL; (*Reset error*)
 	END_STRUCT;
 	netPAR : 	STRUCT 
-		state_machine : netSTATE; (*State machine*)
 		server_name : STRING[80]; (*Use server name*)
 		server_ip : STRING[80] := '192.168.0.10'; (*or IP address*)
 		server_port : STRING[80]; (*Uses default port when empty*)
@@ -26,14 +26,13 @@ TYPE
 		is_linked : BOOL; (*Network share is connected*)
 	END_STRUCT;
 	netERR : 	STRUCT 
-		no : UINT; (*Error number*)
 		state : netSTATE;
 		text : STRING[80]; (*Error text*)
-		active : BOOL;
 	END_STRUCT;
 	netMAIN : 	STRUCT 
 		CMD : netCMD; (*Command structure*)
 		PAR : netPAR; (*Parameter structure*)
 		ERR : netERR; (*Error structure*)
+		status : UINT;
 	END_STRUCT;
 END_TYPE
