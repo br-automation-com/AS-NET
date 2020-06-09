@@ -114,7 +114,7 @@ The task uses a variable structure to communicate with the outside world that ca
   </tr>
   <tr>
    <td>status</td>
-   <td colspan="3">Cuurent status</td>
+   <td colspan="3">Curent status</td>
   </tr>
 </table>
 
